@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAGICMANGA</title>
+  <link rel="icon" href="https://api.iconify.design/noto:red-circle.svg?color=%23ff0000&width=32" type="image/svg+xml">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 2rem 1rem;
+      width: 100%;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: #ff3c00;
+      text-shadow: 0 0 5px #ff3c00, 0 0 10px #ff3c00, 0 0 20px #ff3c00, 0 0 40px #ff3c00;
+      animation: flicker 2s infinite;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+      20%, 24%, 55% { opacity: 0.4; }
+    }
+    .marquee-bar {
+      background-color: #c40046;
+      color: #fff;
+      font-weight: bold;
+      width: 100%;
+      height: 2.5rem;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .marquee-track {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: scroll-marquee 20s linear infinite;
+    }
+    @keyframes scroll-marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .main {
+      max-width: 800px;
+      width: 100%;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .links a {
+      padding: 1rem;
+      font-size: 1.1rem;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .links a:hover {
+      background: #444;
+      animation: glow 0.8s forwards;
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
+      100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.9); }
+    }
+    .paypal-button {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #ffc439;
+      color: #111;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      margin-top: 1rem;
+    }
+    .paypal-button:hover {
+      background-color: #ffb347;
+    }
+    .payment-icons {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .payment-icons img {
+      height: 28px;
+    }
+    #review-box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+    #review {
+      background: #fff;
+      color: #000;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      max-width: 90%;
+      width: 280px;
+      text-align: center;
+      font-size: 1rem;
+      transition: opacity 0.5s ease;
+    }
+    #review-avatar {
+      width: 50px;
+      height: 50px;
+      background: #000;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 0 auto 1rem auto;
+    }
+    footer {
+      width: 100%;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MAGICMANGA</h1>
+    <p>Your favorite vintage streetwear & style</p>
+  </header>
+
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        🔥 Handpicked Vintage Only – No Fakes, Just Fire • 🌍 Worldwide Shipping 7–25 Days Max • 🔹 Rare Finds You Won’t See Twice • ⭐ Trusted eBay & Etsy Seller – 1000+ Happy Buyers • 🎁 Discounts, Drops & Hidden Gems Weekly
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <h2>Find Us On:</h2>
+    <div class="links">
+      <a href="https://www.ebay.com/str/mangamag1c" target="_blank">Shop on eBay</a>
+      <a href="https://www.etsy.com/shop/MagicMangaShop" target="_blank">Shop on Etsy</a>
+      <a href="https://www.instagram.com/magicmangaua" target="_blank">Follow on Instagram</a>
+    </div>
+
+    <h3 style="margin-top: 0.5rem;">Support our project — every bit helps 💛</h3>
+    <a href="https://www.paypal.com/donate/?business=mangasarpetrosyan@gmail.com&currency_code=USD" target="_blank" class="paypal-button">
+      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" style="height: 18px; vertical-align: middle; margin-right: 6px;">
+      Send a Tip 💸
+    </a>
+
+    <div class="payment-icons">
+      <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+      <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="MasterCard">
+      <img src="https://img.icons8.com/color/48/000000/amex.png" alt="American Express">
+      <img src="https://img.icons8.com/color/48/000000/discover.png" alt="Discover">
+      <img src="https://img.icons8.com/color/48/000000/unionpay.png" alt="UnionPay">
+    </div>
+  </div>
+
+  <div id="review-box">
+    <div id="review">
+      <div id="review-avatar">B</div>
+      <strong>Briony</strong><br>
+      <div style="color: gold; margin: 0.5rem 0;">★★★★★</div>
+      Really smooth and easy transaction, no problems 👍
+    </div>
+  </div>
+
+  <script>
+    const reviews = [
+      { name: "Briony", text: "Really smooth and easy transaction, no problems 👍" },
+      { name: "Andrew B Panagopoulos", text: "Fast shipping and quality product." },
+      { name: "Louise T", text: "Great communication. Item just as described!" },
+      { name: "Jason M", text: "Super fast delivery and amazing item condition!" }
+    ];
+
+    let index = 0;
+    const reviewEl = document.getElementById("review");
+    const avatarEl = document.getElementById("review-avatar");
+
+    setInterval(() => {
+      reviewEl.style.opacity = 0;
+      setTimeout(() => {
+        index = (index + 1) % reviews.length;
+        const firstLetter = reviews[index].name.charAt(0).toUpperCase();
+        avatarEl.textContent = firstLetter;
+        reviewEl.innerHTML = `
+          <div id="review-avatar">${firstLetter}</div>
+          <strong>${reviews[index].name}</strong><br>
+          <div style="color: gold; margin: 0.5rem 0;">★★★★★</div>
+          ${reviews[index].text}`;
+        reviewEl.style.opacity = 1;
+      }, 500);
+    }, 5000);
+  </script>
+
+  <footer>
+    <p>&copy; 2023–2025 MAGICMANGA. All rights reserved.</p>
+    <p>Made with ❤️ for vintage lovers</p>
+  </footer>
+
+  <div id="thankyou-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); display: flex; justify-content: center; align-items: center; z-index: 999;">
+    <div style="background: #111; border: 2px solid #ff3c00; color: #fff; padding: 2rem 2.5rem; border-radius: 14px; box-shadow: 0 0 20px rgba(0,0,0,0.6); font-size: 1.1rem; font-weight: bold; text-align: center; max-width: 90%;">
+      💌 Thank you for choosing us! Your support is our motivation 💪<br><br>
+      <button onclick="document.getElementById('thankyou-overlay').style.display='none'" style="padding: 0.6rem 1.2rem; font-size: 1.4rem; background: #fff; color: #000; border: none; border-radius: 50%; cursor: pointer;">❤️</button>
+    </div>
+  </div>
+</body>
+</html>
