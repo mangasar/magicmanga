@@ -207,21 +207,63 @@
   </p>
 </section>
 
+<style>
+  .heart-float {
+    position: absolute;
+    font-size: 20px;
+    animation: floatUp 1s ease-out forwards;
+    opacity: 0;
+  }
+  @keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-50px); opacity: 0; }
+  }
+</style>
 
-    <h3 style="margin-top: 0.5rem;">Support our project — every bit helps 💛</h3>
-    <a href="https://www.paypal.com/donate/?business=super_sabadyr@ukr.net&currency_code=USD" target="_blank" class="paypal-button">
-      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" style="height: 18px; vertical-align: middle; margin-right: 6px;">
-      Send a Tip 💸
-    </a>
+<div style="text-align: center; padding: 2rem 1rem; background-color: #fffbea; border-radius: 16px; max-width: 480px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: relative;">
+  <p style="font-size: 1.2rem; margin-bottom: 1.2rem; font-weight: 600; color: #333;">
+    💛 Support our project — <span style="color: #e4a800;">every bit helps</span>
+  </p>
+  <a id="donate-btn" href="https://www.paypal.me/magicmanga" target="_blank" style="background-color: #ffc439; color: #000; padding: 0.9rem 2.2rem; border-radius: 10px; text-decoration: none; font-size: 1rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 6px 14px rgba(0,0,0,0.15); transition: all 0.3s ease; transform: scale(1); position: relative; overflow: hidden;"
+     onmouseover="this.style.backgroundColor='#ffdd55'; this.style.transform='scale(1.05)';"
+     onmouseout="this.style.backgroundColor='#ffc439'; this.style.transform='scale(1)';"
+     onmousedown="this.style.transform='scale(0.96)';"
+     onmouseup="this.style.transform='scale(1.05)';">
+    <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal Icon" style="height: 20px;">
+    Send a Tip 💸
+  </a>
 
-    <div class="payment-icons">
-      <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
-      <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="MasterCard">
-      <img src="https://img.icons8.com/color/48/000000/amex.png" alt="American Express">
-      <img src="https://img.icons8.com/color/48/000000/discover.png" alt="Discover">
-      <img src="https://img.icons8.com/color/48/000000/unionpay.png" alt="UnionPay">
-    </div>
+  <div id="heart-container" style="position: absolute; left: 50%; top: 110px; transform: translateX(-50%); pointer-events: none;"></div>
+
+  <div style="margin-top: 1.5rem; display: flex; justify-content: center; align-items: center; gap: 0.7rem; flex-wrap: wrap;">
+    <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" style="height: 28px;">
+    <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="Mastercard" style="height: 28px;">
+    <img src="https://img.icons8.com/color/48/000000/amex.png" alt="American Express" style="height: 28px;">
+    <img src="https://img.icons8.com/color/48/000000/discover.png" alt="Discover" style="height: 28px;">
   </div>
+
+  <p style="font-size: 0.9rem; color: #444; margin-top: 1.2rem;">
+    💡 After clicking, please choose <strong>“Send to a friend”</strong> to avoid PayPal fees 🙏
+  </p>
+  <p style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">
+    Or send to email: <strong>manhasar9@gmail.com</strong>
+  </p>
+</div>
+
+<script>
+  document.getElementById('donate-btn').addEventListener('click', function () {
+    const container = document.getElementById('heart-container');
+    for (let i = 0; i < 3; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart-float';
+      heart.textContent = '💛';
+      heart.style.left = `${Math.random() * 60 - 30}px`;
+      heart.style.top = `${Math.random() * 10}px`;
+      container.appendChild(heart);
+      setTimeout(() => heart.remove(), 1000);
+    }
+  });
+</script>
 
   <div style="max-width: 600px; margin: 3rem auto; background: #fff; border-radius: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.1); padding: 2rem; text-align: center; font-family: 'Arial', sans-serif;">
   <h2 style="color: #111; font-size: 1.8rem; margin-bottom: 1rem;">📸 Want a discount? Easy!</h2>
