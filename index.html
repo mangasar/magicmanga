@@ -170,6 +170,37 @@
   </style>
 </head>
 <body>
+  <!-- 🔸 АВТОМАТИЧЕСКАЯ ПЛАШКА -->
+<div id="top-banner">
+  💌 Thank you for choosing us! Your support motivates us 💪
+</div>
+
+<style>
+  #top-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: bold;
+    font-size: 1rem;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: slideDownUp 2s ease-out forwards;
+  }
+
+  @keyframes slideDownUp {
+    0% { opacity: 0; transform: translateY(-100%); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-100%); }
+  }
+</style>
+
   <header>
     <h1>MAGICMANGA</h1>
     <p>Your favorite vintage streetwear & style</p>
