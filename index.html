@@ -203,6 +203,31 @@
     90% { opacity: 1; transform: translateY(0); }
     100% { opacity: 0; transform: translateY(-100%); }
   }
+  @keyframes showHeader {
+  to { opacity: 1; }
+}
+
+.typewriter {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #ff3c00;
+  overflow: hidden;
+  border-right: 3px solid #ff3c00;
+  white-space: nowrap;
+  width: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 10ch }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
 </style>
 
 
