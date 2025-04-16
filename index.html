@@ -170,7 +170,7 @@
   </style>
 </head>
 <body>
-  <!-- 🔸 АВТОМАТИЧЕСКАЯ ПЛАШКА -->
+<!-- 🔸 АВТОМАТИЧЕСКАЯ ПЛАШКА -->
 <div id="top-banner">
   💌 Thank you for choosing us! Your support motivates us 💪
 </div>
@@ -190,7 +190,9 @@
     z-index: 9999;
     opacity: 0;
     transform: translateY(-100%);
-    animation: slideDownUp 2s ease-out forwards;
+    animation: slideDownUp 2s ease-out 0.5s forwards;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 12px 12px;
   }
 
   @keyframes slideDownUp {
@@ -200,6 +202,7 @@
     100% { opacity: 0; transform: translateY(-100%); }
   }
 </style>
+
 
   <header>
     <h1>MAGICMANGA</h1>
